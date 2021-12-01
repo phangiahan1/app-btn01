@@ -58,8 +58,8 @@ const MainClassUser = ({ classData }) => {
     //coop owner
     const [coopOwner, setCoopOwner] = useState([]);
     const fetchItemsCoopOwner = async () => {
-        // const url = '//localhost:5000/classroom/' + classData._id + '/allteacher'
-        const url = ' //localhost:5000/classroom/' + classData._id + '/allteacher'
+        // const url = '//api-btn01.herokuapp.com/classroom/' + classData._id + '/allteacher'
+        const url = ' //api-btn01.herokuapp.com/classroom/' + classData._id + '/allteacher'
         const data = await fetch(url);
         const items = await data.json();
         setCoopOwner(items);
@@ -73,8 +73,8 @@ const MainClassUser = ({ classData }) => {
     };
 
     const fetchItems1 = async () => {
-        // const url = '//localhost:5000/user/findEmail/' + classData.owner + '';
-        const url = ' //localhost:5000/user/findEmail/' + classData.owner + '';
+        // const url = '//api-btn01.herokuapp.com/user/findEmail/' + classData.owner + '';
+        const url = ' //api-btn01.herokuapp.com/user/findEmail/' + classData.owner + '';
         const data = await fetch(url);
         const items = await data.json();
         setOwerClass(items);
@@ -87,8 +87,8 @@ const MainClassUser = ({ classData }) => {
     // http://api-btn01.herokuapp.com/
     const [createdClassesPeople, setCreatedClassesPeople] = useState([]);
     const fetchItems = async () => {
-        // url = '//localhost:5000/classroom/' + classData._id + '/alluser'
-        const  url = ' //localhost:5000/classroom/' + classData._id + '/alluser'
+        // url = '//api-btn01.herokuapp.com/classroom/' + classData._id + '/alluser'
+        const  url = ' //api-btn01.herokuapp.com/classroom/' + classData._id + '/alluser'
         const data = await fetch(url);
         const items = await data.json();
         setCreatedClassesPeople(items);
